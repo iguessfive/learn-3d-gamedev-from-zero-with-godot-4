@@ -1,8 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1740564407
+::res://::1740741780
 arm_icon.png::CompressedTexture2D::8117327855995986543::1739109995::1739204064::1::::<><>::
 default_bus_layout.tres::AudioBusLayout::4006886044254756361::1739109995::0::1::::<><>::
-game.tscn::PackedScene::2706888151680467500::1740500443::0::1::::<><>::res://assets/sky/sky.gdshader<>uid://y8sti7ev7rh5::::res://lesson/Player.tscn<>uid://bq1e7yi8uo37t::::res://level/terrain.tscn
+game.tscn::PackedScene::2706888151680467500::1740576865::0::1::::<><>::res://assets/sky/sky.gdshader<>uid://y8sti7ev7rh5::::res://lesson/Player.tscn<>uid://bq1e7yi8uo37t::::res://level/terrain.tscn
 LICENSE.txt::TextFile::-1::1739109995::0::1::::<><>::
 ::res://addons/::1739109995
 ::res://addons/gdpractice/::1739109995
@@ -130,9 +130,9 @@ circle_white_32x32.png::CompressedTexture2D::4397947160841169047::1739109995::17
 flying_sparkles.tscn::PackedScene::2181557926116024394::1739109995::0::1::::<><>::uid://b3wnsus17aydr::::res://interactables/vfx/circle_white_32x32.png
 fog_plane.gd::GDScript::-1::1739109995::0::1::::<>Node3D<>::
 fog_plane.tscn::PackedScene::2539408398526133358::1739109995::0::1::::<><>::res://interactables/vfx/fog_plane.gd
-::res://lesson/::1740503878
-Player.tscn::PackedScene::1753784018982364064::1740503878::0::1::::<><>::res://lesson/player_fps_controller.gd
-player_fps_controller.gd::GDScript::-1::1740503629::0::1::::PlayerFPSController<>CharacterBody3D<>::
+::res://lesson/::1740576865
+Player.tscn::PackedScene::1753784018982364064::1740576865::0::1::::<><>::res://lesson/player_fps_controller.gd
+player_fps_controller.gd::GDScript::-1::1740576865::0::1::::PlayerFPSController<>CharacterBody3D<>::
 ::res://level/::1739109995
 terrain.tscn::PackedScene::3563417291328714131::1739109995::0::1::::<><>::uid://brbtohct73mlt::::res://assets/checkboard.png
 ::res://player/::1739204065

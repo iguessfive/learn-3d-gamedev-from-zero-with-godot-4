@@ -50,3 +50,4 @@ shadow_enabled = true
 unique_name_in_owner = true
 
 [node name="Player" parent="." instance=ExtResource("3_1gsp7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.5395, 0)
