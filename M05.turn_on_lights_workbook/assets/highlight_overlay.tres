@@ -10,4 +10,4 @@ shader_parameter/outline_color = Color(1, 0.780392, 0.117647, 1)
 shader_parameter/outline_width = 0.02
 shader_parameter/stripe_frequency = 10.0
 shader_parameter/stripe_animation_speed = 2.0
-shader_parameter/alpha = 1.0
+shader_parameter/alpha = 0.0

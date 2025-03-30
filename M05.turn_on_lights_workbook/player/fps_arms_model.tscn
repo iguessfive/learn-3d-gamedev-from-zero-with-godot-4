@@ -179,7 +179,7 @@ bind/49/name = &"DEF-f_pinky.03.R"
 bind/49/bone = -1
 bind/49/pose = Transform3D(-0.0769383, 0.00191123, 0.997034, -0.992495, -0.0954781, -0.0764051, 0.0950489, -0.99543, 0.00924281, 0.0105357, -0.904105, 0.0848403)
 
-[node name="fps_arms_z_fix" instance=ExtResource("1_533wy")]
+[node name="FPSArmsModel" instance=ExtResource("1_533wy")]
 
 [node name="Skeleton3D" parent="Rig" index="0"]
 bones/0/position = Vector3(-0.0183, -1.42372e-08, -0.0213051)
@@ -267,7 +267,6 @@ bones/48/rotation = Quaternion(0.337235, 0.18763, -0.0688008, 0.919964)
 bones/49/rotation = Quaternion(0.308765, 1.08224e-05, 4.26173e-05, 0.951138)
 
 [node name="arms" parent="Rig/Skeleton3D" index="0"]
-layers = 2
 mesh = SubResource("ArrayMesh_c0b1v")
 skin = SubResource("Skin_36d4v")
 surface_material_override/0 = ExtResource("2_ites5")

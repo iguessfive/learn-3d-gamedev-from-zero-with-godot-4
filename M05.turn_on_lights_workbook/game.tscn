@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://betib1svdimdg"]
 
-[ext_resource type="Shader" path="res://assets/sky/sky.gdshader" id="2_tq2y2"]
-[ext_resource type="PackedScene" uid="uid://y8sti7ev7rh5" path="res://lesson/Player.tscn" id="3_1gsp7"]
+[ext_resource type="Shader" uid="uid://dwr0ed3vic331" path="res://assets/sky/sky.gdshader" id="2_tq2y2"]
+[ext_resource type="PackedScene" uid="uid://y8sti7ev7rh5" path="res://lesson/Player.tscn" id="3_feb5d"]
 [ext_resource type="PackedScene" uid="uid://bq1e7yi8uo37t" path="res://level/terrain.tscn" id="4_801de"]
 
 [sub_resource type="Curve" id="Curve_dm5j7"]
@@ -49,5 +49,5 @@ shadow_enabled = true
 [node name="Terrain" parent="." instance=ExtResource("4_801de")]
 unique_name_in_owner = true
 
-[node name="Player" parent="." instance=ExtResource("3_1gsp7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -19.2697)
+[node name="Player" parent="." instance=ExtResource("3_feb5d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.502708, 0)
