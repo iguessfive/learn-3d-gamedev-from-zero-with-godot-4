@@ -22,8 +22,8 @@ func set_is_active(new_value: bool) -> void:
 	
 	# animation for opening and closing door
 	# store values for top and bottom value open and closed use ternary expression to choose between values
-	var top_value: float = 2.0 if is_active else 1.0
-	var bottom_value: float = -0.0 if is_active else 1.0
+	var top_value: float = 1.0 if is_active else 0.0
+	var bottom_value: float = -1.0 if is_active else 0.0
 	
 	# check if tween is not null and stop and remove tween
 	if _tween_door != null:
