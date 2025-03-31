@@ -1,3 +1,4 @@
+@tool
 class_name Door3D extends Interactable3D
 
 # a bool to hold value when door is open or closed, use a setter to update collider diabled propety
@@ -38,7 +39,3 @@ func set_is_active(new_value: bool) -> void:
 	# animate the tween position property of the mesh instances
 	_tween_door.tween_property(_door_top, "position:y", top_value, 1.0)
 	_tween_door.tween_property(_door_bottom, "position:y", bottom_value, 1.0)
-	
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("interact"):
-		interact()

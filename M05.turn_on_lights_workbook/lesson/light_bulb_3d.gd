@@ -1,3 +1,4 @@
+@warning_ignore("missing_tool")
 class_name LightBulb3D extends Interactable3D
 
 var is_active: bool = false: set = set_is_active

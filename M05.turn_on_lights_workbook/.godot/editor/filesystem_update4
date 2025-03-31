@@ -1,0 +1,6 @@
+res://game.tscn
+res://assets/materials/highlight.gdshader
+res://assets/highlight_overlay.tres
+res://lesson/interactable_3d.gd
+res://lesson/player.tscn
+res://lesson/door_3d.tscn

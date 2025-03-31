@@ -4,17 +4,20 @@
 [ext_resource type="Script" uid="uid://cy5mx47bkp6ne" path="res://lesson/door_3d.gd" id="1_fl7hp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3nk32"]
-size = Vector3(1.52139, 1.78821, 0.450043)
+size = Vector3(1.52139, 1.78821, 0.536949)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fl7hp"]
 size = Vector3(1.99426, 1.97839, 1)
 
-[node name="Door3D" type="Area3D"]
+[node name="Door3D" type="Area3D" node_paths=PackedStringArray("mesh_instances")]
+monitoring = false
 script = ExtResource("1_fl7hp")
+mesh_instances = [NodePath("Door/DoorTop"), NodePath("Door/DoorBottom")]
 
 [node name="Door" parent="." instance=ExtResource("1_3nk32")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.010334)
 shape = SubResource("BoxShape3D_3nk32")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]

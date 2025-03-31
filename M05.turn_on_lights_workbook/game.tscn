@@ -52,7 +52,7 @@ shadow_enabled = true
 unique_name_in_owner = true
 
 [node name="Player" parent="." instance=ExtResource("3_feb5d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.502708, -20.1749)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.634027, 0.502708, -51.981)
 
 [node name="Door3D" parent="." instance=ExtResource("4_fc0e3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -55.065)
