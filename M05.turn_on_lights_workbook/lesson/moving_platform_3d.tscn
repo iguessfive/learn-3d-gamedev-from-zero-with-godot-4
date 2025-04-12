@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://2et2a0eovqlo"]
+
+[ext_resource type="Script" uid="uid://cqsbb7m6el5aa" path="res://lesson/moving_platform_3d.gd" id="1_2o5ck"]
+[ext_resource type="Material" uid="uid://crxb352pl731w" path="res://interactables/moving_platform/platform_material.tres" id="1_410ih"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2o5ck"]
+size = Vector3(4, 0.4, 3)
+
+[node name="MovingPlatform3D" type="Node3D"]
+script = ExtResource("1_2o5ck")
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="."]
+unique_name_in_owner = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="AnimatableBody3D"]
+material_override = ExtResource("1_410ih")
+ignore_occlusion_culling = true
+size = Vector3(4, 0.4, 3)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D"]
+shape = SubResource("BoxShape3D_2o5ck")

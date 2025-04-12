@@ -1,5 +1,8 @@
-RayCast3D
+Marker3D
 CollisionShape3D
+CSGBox3D
+AnimatableBody3D
+RayCast3D
 StaticBody3D
 Area3D
 Interactable3D
