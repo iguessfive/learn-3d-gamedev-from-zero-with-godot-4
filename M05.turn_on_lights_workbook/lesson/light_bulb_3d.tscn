@@ -23,8 +23,9 @@ radius = 0.783853
 radius = 0.627252
 height = 1.48565
 
-[node name="LightBulb3D" type="Area3D"]
+[node name="LightBulb3D" type="Area3D" node_paths=PackedStringArray("mesh_instances")]
 script = ExtResource("1_dvfg1")
+mesh_instances = [NodePath("lightbulb/Bulb"), NodePath("lightbulb/BulbBase")]
 
 [node name="lightbulb" parent="." instance=ExtResource("1_tf2ix")]
 

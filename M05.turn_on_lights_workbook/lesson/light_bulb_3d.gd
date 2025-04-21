@@ -7,9 +7,11 @@ var _tween_bulb: Tween
 
 @onready var _bulb: MeshInstance3D = $lightbulb/Bulb
 
-func interact() -> void:
-	super()
-	is_active = not is_active
+func _ready() -> void:
+	interact_with.connect(func():
+		set_is_active(not is_active)
+	)
+	set_is_active(is_active)
 
 func set_is_active(new_value) -> void: 
 	is_active = new_value
@@ -25,8 +27,3 @@ func set_is_active(new_value) -> void:
 	_tween_bulb.set_trans(Tween.TRANS_SINE)
 	
 	_tween_bulb.tween_property(_bulb.material_override, "emission_energy_multiplier", brightness_level, 1.0) 
-	
-
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("interact"):
-		set_is_active(not is_active)

@@ -12,14 +12,16 @@ var _tween_door: Tween = null
 @onready var _door_top: MeshInstance3D = $Door/DoorTop
 
 # update interact function from parent
-func interact() -> void:
-	super()
-	set_is_active(not is_active)
+func _ready() -> void:
+	interact_with.connect(func():
+		set_is_active(not is_active)
+	)
+	set_is_active(is_active)
 
 # a setter for bool to update value
 func set_is_active(new_value: bool) -> void:
 	is_active = new_value
-	_static_body_collision_shape_3d.disabled = is_active
+	_static_body_collision_shape_3d.disabled = is_active # using the inactive in bool varibles, no need for conditional
 	
 	# animation for opening and closing door
 	# store values for top and bottom value open and closed use ternary expression to choose between values

@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://y8sti7ev7rh5"]
+[gd_scene load_steps=7 format=3 uid="uid://y8sti7ev7rh5"]
 
 [ext_resource type="Script" uid="uid://c2dxojvc634a" path="res://lesson/player_fps_controller.gd" id="1_e7csy"]
 [ext_resource type="Script" uid="uid://0gsnk2gsb0kj" path="res://lesson/interaction_ray_cast_3d.gd" id="2_qu0iu"]
+[ext_resource type="PackedScene" uid="uid://boxjhr6k6w7bg" path="res://player/fps_arms_model.tscn" id="3_h7u18"]
+[ext_resource type="PackedScene" uid="uid://cl2ytb52ylubc" path="res://player/weapon/small_laser_pistol.glb" id="4_uukcu"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_dgs58"]
 height = 1.6
@@ -33,5 +35,20 @@ unique_name_in_owner = true
 
 [node name="InteractionRayCast3D" type="RayCast3D" parent="Neck/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0214607, 0)
+visible = false
 target_position = Vector3(0, 0, -4)
 script = ExtResource("2_qu0iu")
+
+[node name="FPSArmsModel" parent="Neck/Camera3D" instance=ExtResource("3_h7u18")]
+unique_name_in_owner = true
+transform = Transform3D(0.5, 0, 0, 0, 0.499552, 0.0211645, 0, -0.0211645, 0.499552, -0.02608, -0.106081, 0.0878426)
+
+[node name="BoneAttachment3D" type="BoneAttachment3D" parent="Neck/Camera3D/FPSArmsModel/Rig/Skeleton3D" index="1"]
+transform = Transform3D(0.99077, -0.059863, -0.121621, 0.129513, 0.153155, 0.979679, -0.0400196, -0.986388, 0.159494, 0.195015, 0.0553696, -0.473238)
+bone_name = "DEF-hand.R"
+bone_idx = 30
+
+[node name="small_laser_pistol" parent="Neck/Camera3D/FPSArmsModel/Rig/Skeleton3D/BoneAttachment3D" instance=ExtResource("4_uukcu")]
+transform = Transform3D(-0.970821, 0.231196, 0.0636876, 0.0250963, -0.166171, 0.985778, 0.238491, 0.958612, 0.15552, -0.0121184, 0.132803, 0.0415633)
+
+[editable path="Neck/Camera3D/FPSArmsModel"]

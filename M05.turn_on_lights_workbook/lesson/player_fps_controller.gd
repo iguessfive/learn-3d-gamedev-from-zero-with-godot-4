@@ -25,6 +25,10 @@ var is_crouching := false: set = set_is_crounching
 @onready var _crounch_ceiling_cast: ShapeCast3D = %CrounchCeilingCast
 
 @onready var _collision_shape_start_height: float = _collision_shape_3d.shape.height # = height of the initial player collision
+@onready var _animation_player: AnimationPlayer = %FPSArmsModel.get_node("AnimationPlayer")
+
+func _ready() -> void:
+	_animation_player.playback_default_blend_time = 0.2
 
 func _process(delta: float) -> void:
 	var joystick_look_vector = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
@@ -70,6 +74,15 @@ func _physics_process(delta: float) -> void:
 	
 	if is_on_floor() and Input.is_action_just_pressed("jump"):
 		velocity.y  = jump_velocity
+	
+	#region Animation
+	if is_on_floor() and player_wants_to_move:
+		_animation_player.play("Walk")
+		_animation_player.speed_scale = 0.5 + velocity.length() / max_speed_sprint
+	else:
+		_animation_player.play("Idle")
+		_animation_player.speed_scale = 1.0
+	#endregion 
 	
 	var was_in_air := not is_on_floor()
 	var fall_speed := absf(velocity.y)

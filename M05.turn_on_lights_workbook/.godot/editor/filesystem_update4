@@ -1,4 +1,14 @@
-res://game.tscn
+res://lesson/moving_platform_3d.tscn
 res://assets/materials/highlight.gdshader
 res://assets/highlight_overlay.tres
+res://interactables/moving_platform/platform_material.tres
 res://lesson/moving_platform_3d.gd
+res://game.tscn
+res://lesson/player.tscn
+res://lesson/door_3d.tscn
+res://interactables/lever/lever_3d.tscn
+res://interactables/lever/lever_model.tscn
+res://lesson/light_bulb_3d.tscn
+res://player/fps_arms_model.tscn
+res://player/materials/arms_mat.tres
+res://lesson/player_fps_controller.gd
